@@ -1,6 +1,6 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/api-extractor/v7/api-extractor.schema.json",
-  "mainEntryPointFilePath": "<projectFolder>/.build/react.d.ts",
+  "mainEntryPointFilePath": "<projectFolder>/dist/.build/react.d.ts",
   "apiReport": {
     "enabled": false
   },
@@ -9,7 +9,7 @@
   },
 
   "dtsRollup": {
-    "untrimmedFilePath": "<projectFolder>/react.d.ts",
+    "untrimmedFilePath": "<projectFolder>/dist/react/react.d.ts",
     "enabled": true
   },
   "tsdocMetadata": {

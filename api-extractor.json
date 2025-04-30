@@ -1,6 +1,6 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/api-extractor/v7/api-extractor.schema.json",
-  "mainEntryPointFilePath": "<projectFolder>/.build/keen-slider.d.ts",
+  "mainEntryPointFilePath": "<projectFolder>/dist/.build/keen-slider.d.ts",
   "apiReport": {
     "enabled": false
   },
@@ -9,7 +9,7 @@
   },
 
   "dtsRollup": {
-    "untrimmedFilePath": "<projectFolder>/keen-slider.d.ts",
+    "untrimmedFilePath": "<projectFolder>/dist/keen-slider.d.ts",
     "enabled": true
   },
   "tsdocMetadata": {

@@ -1,58 +1,58 @@
 {
   "name": "keen-slider",
   "version": "6.8.6",
-  "description": "The HTML touch slider carousel with the most native feeling you will get.",
-  "main": "keen-slider.cjs.js",
-  "jsnext:main": "keen-slider.es.js",
-  "module": "keen-slider.es.js",
-  "types": "keen-slider.d.ts",
-  "files": [
-    "keen-slider.*",
-    "react.*",
-    "react-native.*",
-    "vue.*"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/rcbyr/keen-slider.git"
-  },
-  "keywords": [
-    "slider",
-    "carousel",
-    "caroussel",
-    "slideshow",
-    "react",
-    "react-native",
-    "vue",
-    "vue3",
-    "vuejs",
-    "javascript",
-    "typescript",
-    "angular",
-    "webcomponents",
-    "gallery",
-    "plugin",
-    "ios",
-    "headless"
-  ],
   "author": "Eric Beyer <contact@ericbeyer.de>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/rcbyr/keen-slider/issues"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rcbyr/keen-slider.git"
+  },
   "homepage": "https://keen-slider.io",
+  "description": "The HTML touch slider carousel with the most native feeling you will get.",
+  "main": "dist/keen-slider.cjs.js",
+  "jsnext:main": "dist/keen-slider.es.js",
+  "module": "dist/keen-slider.es.js",
+  "types": "dist/keen-slider.d.ts",
+  "files": [
+    "dist/"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/keen-slider.es.js",
+      "require": "./dist/keen-slider.cjs.js",
+      "types": "./dist/keen-slider.d.ts"
+    },
+    "./react": {
+      "import": "./dist/react/react.es.js",
+      "require": "./dist/react/react.js",
+      "types": "./dist/react/react.d.ts"
+    },
+    "./vue": {
+      "import": "./dist/vue/vue.es.js",
+      "require": "./dist/vue/vue.js",
+      "types": "./dist/vue/vue.d.ts"
+    },
+    "./react-native": {
+      "import": "./dist/react/react-native.js",
+      "types": "./dist/react/react-native.d.ts"
+    }
+  },
   "scripts": {
-    "build": "tsc && rollup -c && npm run build:types",
+    "build": "tsc && rollup -c --bundleConfigAsCjs && npm run build:types",
     "dev": "tsc-watch",
     "test": "jest",
     "lint": "eslint . --ext .ts",
     "build:types": "npm run extract && npm run fix:types",
     "extract": "npm run extract:default && npm run extract:react && npm run extract:vue && npm run extract:react-native",
-    "extract:default": "npx api-extractor run -c ./api-extractor.json && cp -f ./keen-slider.d.ts ./keen-slider.es.d.ts",
-    "extract:react": "npx api-extractor run -c ./api-extractor.react.json && cp -f ./react.d.ts ./react.es.d.ts",
+    "extract:default": "npx api-extractor run -c ./api-extractor.json && cp -f ./dist/keen-slider.d.ts ./dist/keen-slider.es.d.ts",
+    "extract:react": "npx api-extractor run -c ./api-extractor.react.json && cp -f ./dist/react/react.d.ts ./dist/react/react.es.d.ts",
     "extract:react-native": "npx api-extractor run -c ./api-extractor.react-native.json",
-    "extract:vue": "npx api-extractor run -c ./api-extractor.vue.json && cp -f ./vue.d.ts ./vue.es.d.ts",
-    "fix:types": "eslint . --ext .d.ts --fix"
+    "extract:vue": "npx api-extractor run -c ./api-extractor.vue.json && cp -f ./dist/vue/vue.d.ts ./dist/vue/vue.es.d.ts",
+    "fix:types": "eslint dist/**/*.d.ts --fix",
+    "clean": "rm -rf ./dist"
   },
   "devDependencies": {
     "@babel/core": "^7.17.9",

@@ -1,6 +1,6 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/api-extractor/v7/api-extractor.schema.json",
-  "mainEntryPointFilePath": "<projectFolder>/.build/vue.d.ts",
+  "mainEntryPointFilePath": "<projectFolder>/dist/.build/vue.d.ts",
   "apiReport": {
     "enabled": false
   },
@@ -9,7 +9,7 @@
   },
 
   "dtsRollup": {
-    "untrimmedFilePath": "<projectFolder>/vue.d.ts",
+    "untrimmedFilePath": "<projectFolder>/dist/vue/vue.d.ts",
     "enabled": true
   },
   "tsdocMetadata": {

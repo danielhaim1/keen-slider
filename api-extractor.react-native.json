@@ -1,6 +1,6 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/api-extractor/v7/api-extractor.schema.json",
-  "mainEntryPointFilePath": "<projectFolder>/.build/react-native.d.ts",
+  "mainEntryPointFilePath": "<projectFolder>/dist/.build/react-native.d.ts",
   "apiReport": {
     "enabled": false
   },
@@ -9,7 +9,7 @@
   },
 
   "dtsRollup": {
-    "untrimmedFilePath": "<projectFolder>/react-native.d.ts",
+    "untrimmedFilePath": "<projectFolder>/dist/react/react-native.d.ts",
     "enabled": true
   },
   "tsdocMetadata": {
